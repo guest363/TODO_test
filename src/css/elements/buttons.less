@@ -1,0 +1,37 @@
+@button-active-color: #5f9ea0;
+@button-save-color: #d8f0f7;
+@button-delete-color: #ffb8b8;
+@button-border-color: #e7e7e7;
+@button--bg: #ffff;
+@button-cancel-color: #ecfcee;
+//noinspection CssOverwrittenProperties
+button {
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  :active {
+    background: @button-active-color;
+  }
+}
+.bt {
+  &__save {
+    background: @button-save-color;
+    &:hover {
+      background: darken(@button-save-color, 20%);
+    }
+  }
+  &__delete {
+    background: @button-delete-color;
+    &:hover {
+      background: darken(@button-delete-color, 20%);
+    }
+  }
+  &__cancel {
+    background: @button-cancel-color;
+    &:hover {
+      background: darken(@button-cancel-color, 20%);
+    }
+  }
+}
