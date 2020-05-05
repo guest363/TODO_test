@@ -184,8 +184,9 @@ export default {
       }
     },
     removeTodo(index) {
-      this.card.items.splice(this.card.items[index], 1);
+      this.card.items.splice(index, 1);
       if (this.card.items[0] === void 0) {
+        console.log('void')
         this.addTodo();
         return;
       }
