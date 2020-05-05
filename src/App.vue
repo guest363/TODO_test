@@ -9,7 +9,16 @@
 <script>
 const App = {
   name: "App",
-  computed: {},
+  mounted() {
+    const setCSSCustomPropVh = () => {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
+    };
+    setCSSCustomPropVh();
+    window.addEventListener("resize", () => {
+      setCSSCustomPropVh();
+    });
+  }
 };
 export default App;
 </script>
